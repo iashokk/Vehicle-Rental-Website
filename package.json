@@ -2,10 +2,8 @@
   "name": "vehiclerental",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "engines": {
-    "node": ">=18.0.0",
-    "npm" : "7.4.3"
+    "node": "16.x"
   },
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -13,6 +11,9 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node server.js",
+    "build": "npm run build --prefix client",
+    "vercel-build": "npm run build",
+    "vercel-start": "node server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
@@ -20,8 +21,10 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^6.0.11",
-    "nodemon": "^2.0.14",
     "stripe": "^8.184.0",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }

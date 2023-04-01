@@ -11,7 +11,7 @@
         "config": {
           "distDir": "client/build",
           "buildCommand": "npm run build",
-          "outputDirectory": "."
+          "outputDirectory": "client/build"
         }
       }
     ],

@@ -88,6 +88,9 @@ function BookingCar({ match }) {
   return (
     <>
       <DrawerAppBar />
+      <br />
+      <br />
+      <br />
       {loading && <Spinner />}
       <Row
         justify="center"

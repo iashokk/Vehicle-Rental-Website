@@ -161,6 +161,29 @@ border-color: #0A2463;
     transform : translateY(-40px)
 
 }
+
+.chatbot-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  background-color: #f9f9f9;
+  height: 400px;
+  width: 300px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+
 .carimg{
   height:180px;
   width: auto;
@@ -209,4 +232,20 @@ border-color: #0A2463;
 
 a{
   color: #0A2463 !important;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+  background-color: rgba(223, 228, 235, 0.644);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(13, 54, 111, 0.644);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #210f86;
 }

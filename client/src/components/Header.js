@@ -8,6 +8,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/joy/Button";
 import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 export default function DrawerAppBar() {
   const [, setMobileOpen] = React.useState(false);
   const location = useLocation();
@@ -15,6 +16,14 @@ export default function DrawerAppBar() {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const [username, setUsername] = useState(null);
+
+  // Retrieve the username from local storage on mount
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    setUsername(user?.username);
+    console.log("username", user?.username);
+  }, []);
   return (
     <>
       <CssBaseline />
@@ -154,44 +163,46 @@ export default function DrawerAppBar() {
               </Typography>
             </Button>
 
-            <Button
-              color="black"
-              href="/admin"
-              sx={{
-                borderRadius: 0,
-                borderBottom:
-                  location.pathname === "/admin" ||
-                  location.pathname === "/addcar" ||
-                  /^\/editcar\/[a-zA-Z0-9]+$/.test(location.pathname)
-                    ? "2px solid white"
-                    : "2px solid blue",
-
-                "&:hover": {
-                  borderBottom: "2px solid white",
-                },
-                "&:focus": {
-                  outline: "none",
-                },
-              }}
-            >
-              <Typography
-                variant="h6"
-                fontWeight={600}
-                fontSize={15}
+            {username === "admin001" && (
+              <Button
+                color="black"
+                href="/admin"
                 sx={{
-                  color: "black",
-                  fontFamily: "Montserrat, sans-serif",
-                  textTransform: "capitalize",
-                  letterSpacing: "1px",
-                  transition: "all .3s ease-in-out",
+                  borderRadius: 0,
+                  borderBottom:
+                    location.pathname === "/admin" ||
+                    location.pathname === "/addcar" ||
+                    /^\/editcar\/[a-zA-Z0-9]+$/.test(location.pathname)
+                      ? "2px solid white"
+                      : "2px solid blue",
                   "&:hover": {
-                    color: "blue",
+                    borderBottom: "2px solid white",
+                  },
+                  "&:focus": {
+                    outline: "none",
                   },
                 }}
               >
-                <a href="/admin">Admin</a>
-              </Typography>
-            </Button>
+                <Typography
+                  variant="h6"
+                  fontWeight={600}
+                  fontSize={15}
+                  sx={{
+                    color: "black",
+                    fontFamily: "Montserrat, sans-serif",
+                    textTransform: "capitalize",
+                    letterSpacing: "1px",
+                    transition: "all .3s ease-in-out",
+                    "&:hover": {
+                      color: "blue",
+                    },
+                  }}
+                >
+                  <a href="/admin">Admin</a>
+                </Typography>
+              </Button>
+            )}
+
             <Button
               color="black"
               href="/login"

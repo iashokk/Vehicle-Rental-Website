@@ -60,7 +60,7 @@ function Login() {
               fontSize={35}
               sx={{ paddingBottom: "15px", color: "white" }}
             >
-              The Best Platform for Vehical Rental
+              The Best Platform for vehicle Rental
             </Typography>
             <Typography
               variant="h1"
@@ -68,7 +68,7 @@ function Login() {
               fontSize={25}
               sx={{ paddingBottom: "15px", color: "white" }}
             >
-              Ease of doing a vehical rental safely and reliably. Of course at a
+              Ease of doing a vehicle rental safely and reliably. Of course at a
               low price.
             </Typography>
 

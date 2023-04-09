@@ -28,8 +28,9 @@ export default function DrawerAppBar() {
     <>
       <CssBaseline />
       <AppBar
-        sx={{ backgroundColor: "white", alignItems: "left" }}
+        sx={{  background: 'linear-gradient(90deg, #E2F3F5 0%, #AED6F1 40%, #2980B9 100%)', alignItems: "left" }}
         elevation={0}
+        
       >
         <Toolbar>
           <IconButton

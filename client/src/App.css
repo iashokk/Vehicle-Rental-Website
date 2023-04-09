@@ -60,3 +60,6 @@
   background-color: #1890ff;
   color: #fff;
 }
+body {
+  background: linear-gradient(90deg, #B0E0E6 0%, #F5FFFA 100%) !important;
+}

@@ -58,7 +58,7 @@ function Register() {
               fontSize={35}
               sx={{ paddingBottom: "15px", color: "white" }}
             >
-              Easy way to rent a vehical at a low price
+              Easy way to rent a vehicle at a low price
             </Typography>
             <Typography
               variant="h1"
@@ -66,7 +66,7 @@ function Register() {
               fontSize={25}
               sx={{ paddingBottom: "15px", color: "white" }}
             >
-              Providing cheap vehicals rental services and safe and comfortable
+              Providing cheap vehicles rental services and safe and comfortable
               facilities.
             </Typography>
 

@@ -53,7 +53,7 @@ export default function DrawerAppBar() {
               fontSize: 30,
             }}
           >
-            Vehical Rent
+            Vehicle Rent
           </Typography>
           <Box sx={{ display: "flex" }}>
             <Button

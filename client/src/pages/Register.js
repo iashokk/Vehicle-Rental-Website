@@ -112,6 +112,23 @@ function Register() {
                       label="Username"
                     />
                   </Form.Item>
+                  <Form.Item name="aadhaar">
+                    <TextField
+                      // html input attribute
+                      // name="username"
+                      placeholder="Aadhaar Number"
+                      label="Aadhaar Number"
+                    />
+                  </Form.Item>
+                  <Form.Item name="pan">
+                    <TextField
+                      // html input attribute
+                      // name="username"
+                      placeholder="PAN Number"
+                      label="PAN Number"
+                    />
+                  </Form.Item>
+
 
                   <Form.Item name="password">
                     <Input.Password
